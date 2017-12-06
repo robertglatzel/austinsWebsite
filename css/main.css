@@ -122,7 +122,7 @@ a:focus {
   padding: 100px 0;
   text-align: center;
   color: black;
-  background: url(../img/austinDrawing.jpg) no-repeat center scroll;
+  background: url(../img/austinDrawing.jpg) no-repeat center fixed;
   background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -168,8 +168,9 @@ a:focus {
   /*text-shadow: 5px 2px 30px seagreen;*/
 }
 
-.fa-chevron-down {
+.fa-paint-brush {
   font-size: 32px;
+  padding-bottom: 20px;
 }
 
 .intro p {
@@ -244,10 +245,10 @@ a:focus {
 
 .newSection {
   margin: 0 auto;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
 }
 .sectionHead {
-  padding-top: 60px;
+  padding-top: 55px;
   font-size: 50px;
   font-family: "Questrial", cursive, sans-serif;
   font-weight: 400;
@@ -261,16 +262,11 @@ a:focus {
 }
 
 
-.carousel-control.left, .carousel-control.right {
-   background-image:none !important;
-   filter:none !important;
-}
-
 #tattoo{
   background: #000000;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-color: white;
+  background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: white;
 }
 
 
@@ -281,15 +277,6 @@ color: white;
 }
 
 /*Here is where the problem is. With the Tattoo and artwork sections.*/
-
-.item img{
-  max-height: 600px !important;
-}
-
-#myCarousel > div > div > img{
-  min-height: 600px;
-}
-
 
 #selfImage {
   margin: 0 auto;
@@ -322,4 +309,39 @@ footer a {
 
 footer a:hover {
   color:white;
+}
+
+@media (max-width: 450px){
+  #artworkFeed iframe,
+  #tattooFeed iframe  {
+    width: 350px;
+    height: 350px;
+  }
+  .intro {
+    background:url(../img/austinDrawing.jpg) no-repeat center center initial
+    !important;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;*/
+    padding-bottom: -20px;
+  }
+}
+
+@media (max-height: 450px){
+  #artworkFeed iframe,
+  #tattooFeed iframe,
+  #instagram .imageFeed  {
+    width: 320px;
+    height: 320px;
+  }
+  .intro {
+    background:url(../img/austinDrawing.jpg) no-repeat center center fixed
+    !important;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;*/
+    background-attachment: scroll;
+  }
 }
